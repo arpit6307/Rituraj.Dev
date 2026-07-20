@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUp, Heart } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons";
+import { LinkedinIcon } from "@/components/ui/SocialIcons";
 import { personalData } from "@/data/portfolioData";
 
 export const Footer = () => {
@@ -74,31 +74,13 @@ export const Footer = () => {
 
           <div className="flex items-center gap-4">
             <a
-              href={personalData.socialLinks.github}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-orange-500 transition-colors flex items-center gap-1"
-            >
-              <GithubIcon className="w-4 h-4" />
-              <span>GitHub</span>
-            </a>
-            <a
               href={personalData.socialLinks.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-orange-500 transition-colors flex items-center gap-1"
+              className="hover:text-orange-500 transition-colors flex items-center gap-1.5 font-semibold text-slate-300"
             >
-              <LinkedinIcon className="w-4 h-4" />
+              <LinkedinIcon className="w-4 h-4 text-blue-500" />
               <span>LinkedIn</span>
-            </a>
-            <a
-              href={personalData.socialLinks.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-orange-500 transition-colors flex items-center gap-1"
-            >
-              <TwitterIcon className="w-4 h-4" />
-              <span>Twitter</span>
             </a>
           </div>
         </div>

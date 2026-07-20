@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
 import {
-  Mail,
   MapPin,
   Phone,
   Send,
@@ -14,7 +13,7 @@ import {
   AlertCircle,
   Loader2,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons";
+import { LinkedinIcon } from "@/components/ui/SocialIcons";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { GradientBlob } from "@/components/ui/GradientBlob";
@@ -97,23 +96,10 @@ export const Contact = () => {
                 Contact Information
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Feel free to reach out via the form or through my social platforms. I typically respond within 24 hours.
+                Feel free to reach out via the form below or connect directly on LinkedIn.
               </p>
 
               <div className="space-y-4 pt-2">
-                <a
-                  href={`mailto:${personalData.email}`}
-                  className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl glass-panel text-slate-800 dark:text-slate-200 hover:text-orange-500 hover:border-orange-500/30 transition-all group"
-                >
-                  <div className="p-2.5 sm:p-3 rounded-lg bg-orange-500/10 text-orange-500 group-hover:scale-110 transition-transform">
-                    <Mail className="w-5 h-5" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">Email</div>
-                    <div className="text-xs sm:text-sm font-semibold truncate">{personalData.email}</div>
-                  </div>
-                </a>
-
                 <div className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl glass-panel text-slate-800 dark:text-slate-200">
                   <div className="p-2.5 sm:p-3 rounded-lg bg-purple-500/10 text-purple-500">
                     <MapPin className="w-5 h-5" />
@@ -138,37 +124,22 @@ export const Contact = () => {
                 </a>
               </div>
 
-              {/* Social links */}
+              {/* Social links - LinkedIn Only */}
               <div className="pt-6 border-t border-slate-200/20 dark:border-white/10">
                 <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 block">
-                  Connect on Socials:
+                  Connect on LinkedIn:
                 </span>
-                <div className="flex items-center gap-3">
-                  <a
-                    href={personalData.socialLinks.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
-                  >
-                    <GithubIcon className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={personalData.socialLinks.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
-                  >
+                <a
+                  href={personalData.socialLinks.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-3 px-4 py-3 rounded-xl glass-panel text-slate-800 dark:text-slate-200 hover:text-orange-500 hover:border-orange-500/30 transition-all w-full font-semibold text-sm"
+                >
+                  <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500">
                     <LinkedinIcon className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={personalData.socialLinks.twitter}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-3 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
-                  >
-                    <TwitterIcon className="w-5 h-5" />
-                  </a>
-                </div>
+                  </div>
+                  <span>Rituraj Srivastava on LinkedIn</span>
+                </a>
               </div>
             </GlassCard>
           </motion.div>

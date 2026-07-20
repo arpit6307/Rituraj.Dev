@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Sparkles, FolderGit2, Search } from "lucide-react";
-import { GithubIcon } from "@/components/ui/SocialIcons";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { projects } from "@/data/portfolioData";
 
@@ -135,23 +134,15 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center gap-2 pt-2 border-t border-white/10">
+                    <div className="pt-2 border-t border-white/10">
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex-1 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 text-center flex items-center justify-center gap-1.5"
+                        className="w-full py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 text-center flex items-center justify-center gap-1.5"
                       >
                         <span>Live Demo</span>
                         <ExternalLink className="w-3 h-3" />
-                      </a>
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="p-2 rounded-lg glass-panel text-slate-300 hover:text-white"
-                      >
-                        <GithubIcon className="w-4 h-4" />
                       </a>
                     </div>
                   </div>

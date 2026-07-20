@@ -3,13 +3,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  Mail,
   ArrowRight,
   Terminal,
   Code2,
   CheckCircle2,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons";
+import { LinkedinIcon } from "@/components/ui/SocialIcons";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { GradientBlob } from "@/components/ui/GradientBlob";
 import { personalData } from "@/data/portfolioData";
@@ -109,45 +108,21 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Social Links */}
+            {/* Social Links - LinkedIn Only */}
             <div className="flex items-center gap-3 sm:gap-4">
               <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Connect:
               </span>
               <div className="flex items-center gap-2.5 sm:gap-3">
                 <a
-                  href={personalData.socialLinks.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2.5 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
-                  aria-label="GitHub"
-                >
-                  <GithubIcon className="w-5 h-5" />
-                </a>
-                <a
                   href={personalData.socialLinks.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-2.5 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:border-orange-500/30 hover:scale-105 transition-all text-xs font-semibold"
                   aria-label="LinkedIn"
                 >
-                  <LinkedinIcon className="w-5 h-5" />
-                </a>
-                <a
-                  href={personalData.socialLinks.twitter}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="p-2.5 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
-                  aria-label="Twitter"
-                >
-                  <TwitterIcon className="w-5 h-5" />
-                </a>
-                <a
-                  href={personalData.socialLinks.email}
-                  className="p-2.5 rounded-xl glass-panel text-slate-700 dark:text-slate-300 hover:text-orange-500 hover:scale-110 transition-all"
-                  aria-label="Email"
-                >
-                  <Mail className="w-5 h-5" />
+                  <LinkedinIcon className="w-4 h-4 text-blue-500" />
+                  <span>LinkedIn Profile</span>
                 </a>
               </div>
             </div>
