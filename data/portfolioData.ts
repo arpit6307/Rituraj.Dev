@@ -63,7 +63,7 @@ Driven by design excellence and performance engineering, I turn complex problems
   availability: "Available for Full-time Roles & Projects",
   socialLinks: {
     github: "https://github.com/riturajswaroop",
-    linkedin: "https://linkedin.com/in/riturajswaroop",
+    linkedin: "https://www.linkedin.com/in/rituraj-srivastava-19abbb158/",
     twitter: "https://twitter.com/riturajswaroop",
     email: "mailto:riturajswaroop@gmail.com",
   },
